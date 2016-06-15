@@ -1,0 +1,59 @@
+<template name="houses">
+	<div style="text-align:center">
+	<div style ="background:lightskyblue" class = "jumbotron">
+	<h1> Available Houses</h1>
+	</div>
+	</div>
+
+	Desired price: <input type="text" class="js-desired">
+	
+	<hr>
+
+
+	<h3>Post a new House</h3>
+	Name:<input type="text" class = "js-offeredBy">
+	<br>
+	<br>
+	Address: <input type="text" class = "js-address">
+	<br>
+	<br>
+	City: <input type="text" class = "js-city">
+	<br>
+	<br>
+	Deposit: <input type="number" class = "js-deposit">
+	<br>
+	<br>
+	Price: <input type="number" class = "js-price">
+	<br>
+	<br>
+	State:<input type="text" class = "js-state">
+	<br>
+	<br>
+	Months:
+	<br>
+	<input type ="checkbox" class="js-jan">January<br>
+	<input type ="checkbox" class="js-feb">February<br>
+	<input type ="checkbox" class="js-mar">March<br>
+	<input type ="checkbox" class="js-apr">April<br>
+	<input type ="checkbox" class="js-may">May<br>
+	<input type ="checkbox" class="js-jun">June<br>
+	<input type ="checkbox" class="js-jul">July<br>
+	<input type ="checkbox" class="js-aug">August<br>
+	<input type ="checkbox" class="js-sep">September<br>
+	<input type ="checkbox" class="js-oct">October<br>
+	<input type ="checkbox" class="js-nov">November<br>
+	<input type ="checkbox" class="js-dec">December<br>
+
+	<button style="background:lightskyblue" class="js-addHouse">Post your House</button>
+
+
+
+<hr>
+<hr>
+	<ul>
+		{{#each h in HouseDatas}}
+		<li>{{h.address}} is available with price of {{h.price}}$ </li>
+		{{/each}}
+	</ul>
+
+</template>

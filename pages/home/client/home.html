@@ -1,0 +1,26 @@
+<template name="home">
+
+<style type = "text/css">
+#wrapper{
+	width:500px;
+	margin : 0 auto;
+	border:1 px solid #000;
+}
+</style>
+
+
+
+
+<div id="wrapper">
+<h1>HouseHub</h1>
+Explore your future houses here!
+</div>
+<br>
+
+<hr/>
+{{#if currentUser}}
+	Congrats! You are logged in now.
+	{{else}}
+	Please login to use website.
+	{{/if}}
+</template>
