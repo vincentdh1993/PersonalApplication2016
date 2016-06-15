@@ -28,11 +28,15 @@ Template.posthouses.events({
 		const nov = $(".js-nov").val();
 		const dec = $(".js-dec").val();
 
+		const image =$(".js-image").val();
+		const images=$(".js-images").val();
+
 		const house = 
 		//{name:name, city:city, state:state,months:[jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec]};
-		{offeredBy:offeredBy, city:city, state:state,months:[jun,jul,aug], price:price, address:address};
+		{offeredBy:offeredBy, city:city, state:state,months:[jun,jul,aug], price:price, address:address, images:images, image:image};
 		console.dir(house);
 		HouseDatas.insert(house);
+		alert("Your house has been posted");
 	}
 
 })

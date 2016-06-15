@@ -41,7 +41,19 @@
 	<input type ="checkbox" class="js-oct">October<br>
 	<input type ="checkbox" class="js-nov">November<br>
 	<input type ="checkbox" class="js-dec">December<br>
+	<br>	
 
+	Images: <input type ="file" name="file" class="js-image">
+
+
+	<hr/>
+	<form method="post" action="upload-page.php" enctype="multipart/form-data">
+  	<input name="filesToUpload[]" id="filesToUpload" type="file" multiple=""  class="js-images"/>
+	</form>
+
+
+	<br>
+	<br>
 	<button style="background:orange" class="js-addHouse">Post your House</button>
 
 
