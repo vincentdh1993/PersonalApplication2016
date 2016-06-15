@@ -1,4 +1,4 @@
-Template.houses.helpers({
+Template.posthouses.helpers({
 	HouseDatas:function(){ //get back tmrw
 		//const price = $(".js-price").val();
 		//console.log(price);
@@ -7,7 +7,7 @@ Template.houses.helpers({
 
 })
 
-Template.houses.events({
+Template.posthouses.events({
 	"click .js-addHouse": function(event){
 		console.log("Clicked");
 		const offeredBy = $(".js-offeredBy").val();
