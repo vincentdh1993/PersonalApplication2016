@@ -1,19 +1,36 @@
-<template name="layout">
-	<div class="container"> <!--bootstrap container to work, should be in the container -->
-		<ul class="nav nav-pills">
-    <li role="presentation" class="active"> <a href={{pathFor 'home'}} ><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a> </li>
-  	<li role="presentation"><a href={{pathFor 'about'}}>About</a></li>
-  	<li role="presentation"><a href={{pathFor 'comments'}}>Comments</a></li>
-    <li role="presentation"><a href={{pathFor 'houses'}}>Available Houses</a></li>
-    <li role="presentation"><a href={{pathFor 'posthouses'}}>Post Houses</a></li>
+<template name="layout" >
 
-  	
-      <div style="text-align:right">
-  		{{> loginButtons}}
-    </div>
-  	
-  	
-	</ul>
-	{{> yield}} <!-- show templates?????-->
+
+<nav class="navbar navbar-default" style ="background:lightskyblue">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+   
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"  >
+      <ul class="nav navbar-nav" >
+    <li role="presentation"> <a href={{pathFor 'home'}} ><span class="glyphicon glyphicon-home" style="color:black" aria-hidden="true" ></span></a> </li>
+    <li role="presentation"><a href={{pathFor 'about'}}>      <span style="color:black">About</span>     </a></li>
+    <li role="presentation"><a href={{pathFor 'comments'}}>    <span style="color:black">comments</span>  </a></li>
+    <li role="presentation"><a href={{pathFor 'houses'}}> <span style="color:black">Search Houses</span>  </a></li>
+    <li role="presentation"><a href={{pathFor 'posthouses'}}>  <span style="color:black">Post Houses</span>  </a></li>
+  
+      </ul>
+      <form class="navbar-form navbar-right" role="login" style="color:black">
+        <div style="text-align:right , color:black">
+      {{> loginButtons}}
+      </div>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <!--bootstrap container to work, should be in the container -->
+  <!-- show templates?????-->
+
+
+  <div class="container"> 
+   
+  {{> yield}} 
 	</div>
 </template>

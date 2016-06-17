@@ -1,4 +1,4 @@
-<template name="houses">
+<template name="houses" >
 	<div style="text-align:center">
 	<div style ="background:lightskyblue" class = "jumbotron">
 	<h1> Available Houses</h1>
@@ -25,7 +25,7 @@
 	<h3>Lists of Houses</h3>
 	<ul>
 		{{#each h in HouseDatas}}
-		<li>{{h.address}} is available with price of {{h.price}}$ by {{h.offeredBy}} image:{{h.image}} </li>
+		<li>{{h.address}} is available with price of {{h.price}}$ by {{h.offeredBy}} image:{{h.images}} </li>
 		{{/each}}
 	</ul>
 	</div>

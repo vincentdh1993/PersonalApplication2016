@@ -33,7 +33,7 @@ Template.posthouses.events({
 
 		const house = 
 		//{name:name, city:city, state:state,months:[jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec]};
-		{offeredBy:offeredBy, city:city, state:state,months:[jun,jul,aug], price:price, address:address, images:images, image:image};
+		{offeredBy:offeredBy, city:city, state:state,months:[jun,jul,aug], price:price, address:address, images:images};
 		console.dir(house);
 		HouseDatas.insert(house);
 		alert("Your house has been posted");
