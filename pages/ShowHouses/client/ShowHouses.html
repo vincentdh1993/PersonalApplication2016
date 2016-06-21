@@ -25,9 +25,14 @@
 	<h3>Lists of Houses</h3>
 	<ul>
 		{{#each h in HouseDatas}}
-		<li>{{h.address}} is available with price of {{h.price}}$ by {{h.offeredBy}} image:{{h.images}} </li>
+		<li>{{h.address}} is available with price of {{h.price}}$ by {{h.offeredBy}} image:{{h.images}}  <a href="/showhouses/{{h._id}}">See More</a></li>
 		{{/each}}
 	</ul>
 	</div>
 
+</template>
+
+
+<template name="showhouses">
+{{address}} is available with price of {{price}}$ by {{offeredBy}}
 </template>

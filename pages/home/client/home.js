@@ -22,3 +22,21 @@ Template.home.helpers({
 
 
 })
+
+
+Template.home.events({
+
+	"change .js-color": function(event, instance){
+		const c = instance.$(".js-color").val();
+		instance.state.set("color",c);
+	},
+
+	"click .js-pusher": function(event, instance){ 
+		console.log("Clicked");
+		const p = instance.state.get("counter"); 
+		instance.state.set("counter", 1+p); 
+	},
+
+});
+
+
