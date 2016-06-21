@@ -6,3 +6,5 @@ Meteor.startup(function(){
 	HouseDatas.insert({address:"415 South Street", city:"Waltham", State: "MA",deposit:1000, price: 1250, offeredBy:"Vincent"});
 
 })
+
+
