@@ -10,13 +10,15 @@
 
 	<h3>Search on Map</h3>
 	Need more work.
+	
+	
 	<hr>
 
 	<h3>Search by Zipcode</h3>
 	Need more work.
 	<hr>
 
-	<h3>Search by near Stations</h3>
+	<h3>Search by Months</h3>
 	Need more work.
 	<hr>
 
@@ -37,3 +39,10 @@
 <template name="showhouses">
 {{address}} is available with price of {{price}}$ by {{offeredBy}}
 </template>
+
+
+<template name="map">  
+  <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+  </div>
+</template> 
