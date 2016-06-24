@@ -8,5 +8,12 @@ Template.houses.helpers({
 })
 
 Template.houses.events({
-	
+	"click .js-removeall": function(event){
+    Meteor.call("removeall",$(".js-password".val()))
+  },
+
+  
+  
 })
+
+
