@@ -30,3 +30,4 @@ peerlibrary:aws-sdk
 servicelocale:googlemaps-api
 dburles:google-maps
 mdg:geolocation
+http
