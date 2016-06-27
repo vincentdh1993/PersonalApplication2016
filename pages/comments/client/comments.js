@@ -24,7 +24,8 @@ Template.comments.events({
 	    createdBy: Meteor.userId(),
 	    userEmail: Meteor.user().emails[0].address};
 	    //console.dir(comment_obj);
-	    Comments.insert(comment_obj);
+	    Meteor.call("postcomments",comment_obj)
+	    //Comments.insert(comment_obj);
 	    $(".js-user-comment").val("");
 	    //Router.go('/');
 	    //console.log("Did we get here????")
