@@ -11,7 +11,9 @@ Template.houses.events({
 	"click .js-removeall": function(event){
     Meteor.call("removeall",$(".js-password".val()))
   },
-
+  	"click .js-desiredState": function (event){
+  		Meteor.subscribe("theHousesStates", $(".js-desiredState").val());
+  	},
   
   
 })
