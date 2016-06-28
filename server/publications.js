@@ -1,8 +1,8 @@
 Meteor.publish("theHouses",
 	function(){return HouseDatas.find();})
 
-Meteor.publish("theHousesStates",
-	function(state){return HouseDatas.find(to:state);})
+//Meteor.publish("theHousesStates",
+//	function(state){return HouseDatas.find(to:state);})
 
 
 Meteor.publish("theComments",
