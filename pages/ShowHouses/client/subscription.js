@@ -1,2 +1,2 @@
-Meteor.subscribe("theHouses");
-//Meteor.subscribe("theHousesCity","Waltham");
+//Meteor.subscribe("theHouses");
+Meteor.subscribe("theHousesAt","Waltham");
