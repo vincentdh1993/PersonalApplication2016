@@ -1,8 +1,8 @@
-Meteor.publish("theHouses",
-	function(){return HouseDatas.find();})
+//Meteor.publish("theHouses",
+//	function(){return HouseDatas.find();})
 
-//Meteor.publish("theHousesStates",
-//	function(state){return HouseDatas.find(to:state);})
+Meteor.publish("theHousesAt",
+function(loc){return HouseDatas.find({city:loc});})
 
 
 Meteor.publish("theComments",
@@ -10,12 +10,13 @@ Meteor.publish("theComments",
 
 
 Meteor.publish("userData", function () {
-	if (this.userId) {
-		//return Meteor.users.find({});
-		return Meteor.users.find({_id: this.userId},
-			{fields:{profile:1, "services.google.email":1}});
-	} else {
-		this.ready();
-	}
-});
-
+    if (this.userId) { // only if you log in can you see it
+  	  //return Meteor.users.find({}); // everyone sees everything!
+                               //{fields: {'profile': 1, 'things': 1}});
+      return Meteor.users.find({_id: this.userId},
+                               {fields:{profile:1,
+                                        "services.google.email":1}});
+    } else {
+      this.ready();
+    }
+  });
