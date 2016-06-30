@@ -21,22 +21,18 @@ Template.houses.events({
 		Meteor.subscribe("theHousesAt",v);
 	},
 
+});
+
+Template.housedatarow.events({
 	"click .js-addWish": function(event){
 		console.log("Clicked");
-		
-		Meteor.call("addwishlist",house);
-		
-		
+		console.dir(this);
+		Meteor.call("addwishlist", this.h);
 	},
 
 
 
-
-
-
-
-
-
+});
 
 
 /*
@@ -49,7 +45,6 @@ Template.houses.events({
 		Meteor.subscribe("theHousesBy",v);
 	},
 */
-  
-})
+ 
 
 

@@ -2,7 +2,10 @@
 //	function(){return HouseDatas.find();})
 
 Meteor.publish("theHousesAt",
-function(loc){return HouseDatas.find({city:loc});})
+function(loc){return HouseDatas.find({city:loc});});
+
+Meteor.publish("theWishList",
+  function(){return Settings.find();});
 
 
 //Meteor.publish("greeting",
