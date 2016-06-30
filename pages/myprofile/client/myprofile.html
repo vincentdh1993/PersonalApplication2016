@@ -1,0 +1,32 @@
+<template name = "myprofile">
+	
+<h2>My profile </h2>
+
+{{#if currentUser}}
+	Congrats! You are logged in now.
+<h3>My Profiles</h3>
+	First Name:<input type="text" class = "js-firstname">
+	<br>
+	<br>
+	Last Name: <input type="text" class = "js-lastname">
+	<br>
+	<br>
+	Nick Name: <input type="text" class = "js-nickname">
+	<br>
+	<br>
+	Email: <input type="text" class = "js-email">
+	<br>
+	<br>
+	Birthyear: <input type="number" class = "js-birthyear">
+	<br>
+	<button class="js-addprofile">Submit My Profile</button>
+	{{else}}
+
+	Please login to use website.
+	{{/if}}
+
+
+
+
+
+</template>

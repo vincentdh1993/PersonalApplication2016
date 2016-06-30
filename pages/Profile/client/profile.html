@@ -1,0 +1,25 @@
+<template name = "profile">
+	<h2> Profiles </h2>
+
+
+	{{#if currentUser}}
+	Congrats! You are logged in now.
+
+
+	<h3>Lists of Profiles</h3>
+	<ol>
+		{{#each h in UserProfiles}}
+		<li>{{h.firstname}} {{h.lastname}}'s nickname is {{h.nickname}} and birthyear is {{h.birthyear}}. Email address is {{h.email}}</li>
+		{{/each}}
+	</ol>
+
+	
+
+
+
+	{{else}}
+	Please login to use website.
+	{{/if}}
+
+
+</template>

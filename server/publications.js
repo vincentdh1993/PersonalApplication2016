@@ -1,6 +1,14 @@
 //Meteor.publish("theHouses",
 //	function(){return HouseDatas.find();})
 
+
+Meteor.publish("theProfiles",
+  function(){return UserProfiles.find();});
+
+Meteor.publish("removeProfiles",
+  function(){return UserProfiles.remove();});
+
+
 Meteor.publish("theHousesAt",
 function(loc){return HouseDatas.find({city:loc});})
 

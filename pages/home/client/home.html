@@ -1,49 +1,11 @@
 <template name="home">
 
-<div align="right">{{language}} {{userName}} !
-<br>
-Choose Your Greeting Language!
-<select  class="js-language" >
-	<option>English</option>
-	<option>Korean</option>
-	<option>Janapese</option>
-</select>
+
+<div class = "jumbotron">
+	<h1> Quiz 2</h1>
+	<p> Vincent Lee </p>
 </div>
 
-<div class={{theColor}}>
-
-
-<h1 align="center">HouseHub </h1>
-<h3 align="center">Explore your future houses here!</h3>
-
-</div>
-
-
-
-
-<select class="js-color">
-	<option>bg-info</option>
-	<option>bg-warning</option>
-</select>
-
-color:{{theColor}}<br>
-counter: {{theCounter}}<br>
-<button class="js-pusher"> Push me</button>
-
-
-<hr>
-
-<br>
-
-<div align="center">
-<marquee  width="400" height="200" direction="right" behavior="alternate"><img class="img-circle" src="images/house.jpg" width="200"> </marquee>
-<marquee  width="400" height="200" direction="left" behavior="alternate"><img class="img-circle" src="images/house2.jpg" width="200"> </marquee>
-<marquee  width="400" height="200" direction="right" behavior="alternate"><img class="img-circle" src="images/house3.jpg" width="300"> </marquee>
-<marquee  width="400" height="200" direction="left" behavior="alternate"><img class="img-circle" src="images/house4.jpg" width="300"> </marquee>
-</div>
-
-
-<hr/>
 
 <div align = "bottom">
 {{#if currentUser}}

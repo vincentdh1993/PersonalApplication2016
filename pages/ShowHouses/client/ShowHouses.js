@@ -9,7 +9,7 @@ Template.houses.helpers({
 
 Template.houses.events({
 	"click .js-removeall": function(event){
-    Meteor.call("removeall",$(".js-password".val()))
+    Meteor.call("removeprofile")
   },
 
   "click .js-desired": function(event){
@@ -20,6 +20,8 @@ Template.houses.events({
 		console.log(v)
 		Meteor.subscribe("theHousesAt",v);
 	},
+
+
 /*
 	"click .js-posted": function(event){
 		console.log(event);
