@@ -36,10 +36,7 @@ Template.home.helpers({
 	},
 	language:function(){
 		const instance = Template.instance();
-		if(instance.state.get("language")==="English"){
-			return english;
-		}
-		//return instance.state.get("language");
+		return instance.state.get("language");
 	}
 
 })
