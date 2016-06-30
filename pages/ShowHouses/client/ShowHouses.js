@@ -20,6 +20,25 @@ Template.houses.events({
 		console.log(v)
 		Meteor.subscribe("theHousesAt",v);
 	},
+
+	"click .js-addWish": function(event){
+		console.log("Clicked");
+		
+		Meteor.call("addwishlist",house);
+		
+		
+	},
+
+
+
+
+
+
+
+
+
+
+
 /*
 	"click .js-posted": function(event){
 		console.log(event);

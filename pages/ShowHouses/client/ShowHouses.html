@@ -29,7 +29,9 @@
 	<h3>Lists of Houses</h3>
 	<ul>
 		{{#each h in HouseDatas}}
-		<li>{{h.address}} is available with price of {{h.price}}$ by {{h.offeredBy}} in {{h.city}} <a href="/showhouses/{{h._id}}">See More</a></li>
+		<li>{{h.address}} is available with price of {{h.price}}$ by {{h.offeredBy}} in {{h.city}} <a href="/showhouses/{{h._id}}">See More</a>
+		<button class="js-addWish">Add to Wish List</button>
+		</li>
 		{{/each}}
 	</ul>
 
