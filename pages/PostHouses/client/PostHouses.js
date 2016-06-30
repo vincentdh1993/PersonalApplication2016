@@ -90,7 +90,6 @@ Template.posthouses.events({
 		const images=$(".js-images").val();
 
 		const house = 
-		//{name:name, city:city, state:state,months:[jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec]};
 		{offeredBy:offeredBy, city:city, state:state,months:months, price:price, address:address, images:images};
 		console.dir(house);
 		//HouseDatas.insert(house);

@@ -6,6 +6,8 @@
 	</div>
 	<h3>Search By City</h3>
 	Desired City: <input type="text" class="js-desired">
+	<br>
+	<button class="js-posted">See My Houses</button>
 	<hr>
 
 	<h3>Search on Map</h3>
@@ -27,7 +29,7 @@
 	<h3>Lists of Houses</h3>
 	<ul>
 		{{#each h in HouseDatas}}
-		<li>{{h.address}} is available with price of {{h.price}}$ by {{h.offeredBy}} in {{h.city}} during {{h.months}} <a href="/showhouses/{{h._id}}">See More</a></li>
+		<li>{{h.address}} is available with price of {{h.price}}$ by {{h.offeredBy}} in {{h.city}} <a href="/showhouses/{{h._id}}">See More</a></li>
 		{{/each}}
 	</ul>
 
