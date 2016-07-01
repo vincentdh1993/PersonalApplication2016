@@ -6,13 +6,12 @@ function(loc){return HouseDatas.find({city:loc});});
 
 Meteor.publish("mylist",
   function(id){
-    console.log(Meteor.userId);
     return Settings.find({userId:id});
   }
 );
 
-Meteor.publish("theWishList",
-  function(){return Settings.find();});
+//Meteor.publish("theWishList",
+ // function(){return Settings.find();});
 
 Meteor.publish("theComments",
   function(){return Comments.find();})

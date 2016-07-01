@@ -2,9 +2,8 @@
 
 {{#if currentUser}}
 	<h2>Here is Your List.</h2>
-	{{#each h in Settings}}
-		<li>{{h.address}} is available! with price of {{h.price}}$ by {{h.offeredBy}} in {{h.city}} Wished by : {{h.userId}}. <a href="/showhouses/{{h._id}}">See More</a>
-		</li>
+	{{#each h in settings}}
+		{{>settingsrow h=(house h.houseId)}}
 		{{/each}}
 
 	{{else}}
@@ -15,3 +14,9 @@
 </template>
 
 
+<template name ="settingsrow">
+	<li>{{h.address}} is available! with price of {{h.price}}$ by {{h.offeredBy}} in {{h.city}}. <a href="/showhouses/{{h._id}}">See More</a>
+	</li>
+
+
+</template>
