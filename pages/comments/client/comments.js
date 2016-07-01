@@ -1,6 +1,6 @@
 
 Template.comments.helpers({
-	comments: function(){
+	Comments: function(){
 		return Comments.find({},{sort:{rating:-1}, limit:100});},
 	
 	

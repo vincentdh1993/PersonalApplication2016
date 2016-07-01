@@ -1,1 +1,1 @@
-Meteor.subscribe("greeting");
+//Meteor.subscribe("greeting");

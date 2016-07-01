@@ -20,6 +20,10 @@ Template.houses.events({
 		console.log(v)
 		Meteor.subscribe("theHousesAt",v);
 	},
+	"click .js-remove-All": function(event){
+    console.log("removing...");
+    Meteor.call("removeAll");
+  },
 
 });
 
@@ -27,12 +31,17 @@ Template.housedatarow.events({
 	"click .js-addWish": function(event){
 		console.log("Clicked");
 		console.dir(this);
+		const userid = Meteor.userId();
 		Meteor.call("addwishlist", this.h);
 	},
-
-
-
 });
+//	"click .js-remove-All1": function(event){
+//    console.log("removing...");
+//    Meteor.call("removeAll");
+//  },
+
+
+
 
 
 /*
