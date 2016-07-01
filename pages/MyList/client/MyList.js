@@ -1,7 +1,9 @@
 
 Template.mylist.helpers({
 	settings:function(){
-		return Settings.find({});
+		const s = Settings.find({userId:Meteor.userId()});
+		console.dir(s.fetch());
+		return s;
 	},
 
 	username: function() {
@@ -10,19 +12,18 @@ Template.mylist.helpers({
 
 	house:function(hId){
 		const h = HouseDatas.findOne({_id:hId});
+		console.log(hId);
 		console.dir(h);
 		return h;
 	},
 })
-
-
-Template.settingsrow.helpers({
-	house:function(hId){
-		return HouseDatas.find({_id:hId})
-	},
-
-})
-
+/*
+Template.mylist.onCreated(function() {
+  	this.autorun(() => {
+    this.subscribe('mylist', Meteor.userId());
+  });
+});	
+*/
 
 /*
 Template.mylist.events({

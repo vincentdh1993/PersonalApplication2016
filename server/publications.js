@@ -5,8 +5,8 @@ Meteor.publish("theHousesAt",
 function(loc){return HouseDatas.find({city:loc});});
 
 Meteor.publish("mylist",
-  function(id){
-    return Settings.find({userId:id});
+  function(){
+    return Settings.find({userId:this.userId});
   }
 );
 
