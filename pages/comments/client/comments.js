@@ -1,7 +1,7 @@
 
 Template.comments.helpers({
 	Comments: function(){
-		return Comments.find({},{sort:{rating:-1}, limit:100});},
+		return Comments.find({});},
 	
 	
 })
@@ -19,12 +19,12 @@ Template.comments.events({
 	   const comment_rating =$(".js-rating-comment").val();
 	   const comment_obj =
 	   {text: comment_text,
-	   	rating: comment_rating,
+	   	rating: parseInt(comment_rating),
 	    createdAt: new Date(),
 	    createdBy: Meteor.userId(),
 	    userEmail: Meteor.user().emails[0].address};
 	    //console.dir(comment_obj);
-	    Meteor.call("postcomments",comment_obj)
+	    Meteor.call("postcomments",comment_obj);
 	    //Comments.insert(comment_obj);
 	    $(".js-user-comment").val("");
 	    //Router.go('/');

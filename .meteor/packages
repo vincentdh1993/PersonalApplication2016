@@ -30,3 +30,5 @@ servicelocale:googlemaps-api
 dburles:google-maps
 mdg:geolocation
 http
+check
+browser-policy
