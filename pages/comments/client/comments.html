@@ -2,7 +2,7 @@
 	<h1> Comments! </h1>
 
 	{{#if currentUser}}
-
+{{theCounter}}
 Comment:<input type="txt" class ="js-user-comment">
 <br>
 <select class="js-rating-comment">
@@ -20,6 +20,12 @@ Comment:<input type="txt" class ="js-user-comment">
 	Submit Comments
 </button>
 
+
+
+<button class = "js-remove-Comments">
+	Delete Comments
+</button>
+  
 {{else}}
 <h2> You must log in to make comments</h2>
 {{/if}}
@@ -28,7 +34,7 @@ Comment:<input type="txt" class ="js-user-comment">
 
 
 	<ul>
-	{{#each c in comments}}
+	{{#each c in Comments}}
 	   {{> commentRow  comment=c}}
 	{{/each}}
 
@@ -36,8 +42,6 @@ Comment:<input type="txt" class ="js-user-comment">
 </template>
 
 <template name="commentRow">
-	 <li> [{{comment.rating}}] {{comment.createdAt}}: {{ comment.text}} : {{comment.userEmail}}
-       <span class="js-delete-comment glyphicon glyphicon-remove" aria-hidden="true">
-       </span>
+	 <li> [{{comment.rating}}] {{comment.createdAt}}: {{comment.text}} : {{comment.userEmail}} <span class="js-like-comment glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> {{theCounter}}
 	  </li>
 </template>

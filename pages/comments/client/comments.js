@@ -1,14 +1,33 @@
+Template.commentRow.onCreated(function() {
+  this.state = new ReactiveDict();
+  this.state.setDefault({
+    color: "bg-info",
+    counter: 0,
+    //language1: "english"
+
+  });
+  console.dir(this.state);
+});
+
 
 Template.comments.helpers({
 	Comments: function(){
-		return Comments.find({});},
-	
-	
+		return Comments.find({});
+	},
 })
 
+
+Template.commentRow.helpers({
+	theCounter: function(){
+		const instance = Template.instance();
+		return instance.state.get("counter");
+	},
+})
+
+
+
 Template.comments.events({
-	"click .js-submit-comment": 
-	 function(event){
+	"click .js-submit-comment": function(event){
 	   event.preventDefault();
 	   //console.dir(event);
 	   const comment_text = $(".js-user-comment").val();
@@ -30,6 +49,11 @@ Template.comments.events({
 	    //Router.go('/');
 	    //console.log("Did we get here????")
 	},
+
+	"click .js-remove-Comments": function(event){
+    console.log("removing...");
+    Meteor.call("removeComments");
+  },
 });
 
 Template.commentRow.events({
@@ -38,4 +62,12 @@ Template.commentRow.events({
 		console.dir(this);
 		Comments.remove(this.comment._id);
 	},
+
+
+	"click .js-like-comment": function(event, instance){ 
+		console.log("Clicked");
+		const p = instance.state.get("counter"); 
+		instance.state.set("counter", 1+p); 
+	},
+
 })
