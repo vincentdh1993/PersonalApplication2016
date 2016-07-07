@@ -1,9 +1,9 @@
 Template.home.onCreated(function() {
   this.state = new ReactiveDict();
   this.state.setDefault({
-    color: "bg-info",
+    color: "green",
     counter: 0,
-    //language1: "english"
+    shape: "img-circle"
 
   });
   console.dir(this.state);
@@ -11,15 +11,19 @@ Template.home.onCreated(function() {
 
 
 Template.home.helpers({
-	theColor: function(){
-		const instance = Template.instance();
-		return instance.state.get("color");
-	},
-	theCounter: function(){
-		const instance = Template.instance();
-		return instance.state.get("counter");
-	},
 
+	theImage: function(){
+    const instance = Template.instance();
+    const c = instance.state.get("image");
+    return c;
+ 	},
+
+ 	theShape: function(){
+    const instance = Template.instance();
+    const c = instance.state.get("shape");
+    return c;
+ 	},
+	
 	userName: function() {
     return Meteor.user().profile.name;  
   	},
@@ -36,6 +40,13 @@ Template.home.events({
 		const c = instance.$(".js-color").val();
 		instance.state.set("color",c);
 	},
+
+
+	"change .js-shape": function(event,instance){
+    const c = instance.$(".js-shape").val();
+    instance.state.set("shape",c);
+    // change the color field of the state object ...
+  },
 
 	"click .js-pusher": function(event, instance){ 
 		console.log("Clicked");
