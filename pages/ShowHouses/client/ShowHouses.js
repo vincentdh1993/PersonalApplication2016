@@ -33,6 +33,7 @@ Template.housedatarow.events({
 		console.dir(this);
 		const userid = Meteor.userId();
 		Meteor.call("addwishlist", this.h);
+		alert("The house has been added to your list");
 	},
 });
 //	"click .js-remove-All1": function(event){

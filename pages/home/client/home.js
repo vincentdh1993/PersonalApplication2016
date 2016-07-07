@@ -1,8 +1,6 @@
 Template.home.onCreated(function() {
   this.state = new ReactiveDict();
   this.state.setDefault({
-    color: "green",
-    counter: 0,
     shape: "img-circle"
 
   });
