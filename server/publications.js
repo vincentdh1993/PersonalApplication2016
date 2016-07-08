@@ -10,6 +10,11 @@ Meteor.publish("mylist",
   }
 );
 
+Meteor.publish("theBios",
+  function(){return Bios.find();})
+
+
+
 //Meteor.publish("theWishList",
  // function(){return Settings.find();});
 
